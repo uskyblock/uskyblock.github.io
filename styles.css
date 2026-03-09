@@ -425,8 +425,32 @@ footer {
     width: min(var(--max), calc(100% - 1.25rem));
   }
 
+  .header-inner {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    padding: 0.28rem 0;
+  }
+
+  .brand {
+    flex: 0 0 auto;
+  }
+
+  .brand-name {
+    font-size: 0.98rem;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .brand-note {
+    display: none;
+  }
+
   .hero {
-    padding: 3.4rem 0 2.4rem;
+    padding: 2.2rem 0 2.4rem;
+  }
+
+  .hero-copy {
+    padding-top: 0;
   }
 
   .why-shell,
@@ -440,14 +464,33 @@ footer {
   }
 
   .button,
-  .nav a,
   .footer-links a {
     width: 100%;
     justify-content: center;
   }
 
   .nav {
-    width: 100%;
+    width: auto;
+    min-width: 0;
+    flex: 1 1 auto;
+    gap: 0.2rem;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav a {
+    width: auto;
+    flex: 0 0 auto;
+    line-height: 1.15;
+    white-space: nowrap;
+    padding: 0.18rem 0.42rem;
   }
 
   .hero-copy {
