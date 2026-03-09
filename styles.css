@@ -10,6 +10,7 @@
   --line-strong: rgba(19, 33, 27, 0.18);
   --accent: #177257;
   --accent-strong: #0f5b44;
+  --accent-gradient: linear-gradient(180deg, rgba(23, 114, 87, 0.95), rgba(15, 91, 68, 0.98));
   --accent-soft: #d8eee5;
   --accent-soft-strong: #bfe0d3;
   --max: 1160px;
@@ -127,16 +128,16 @@ p {
   padding: 4.75rem 0 3.25rem;
 }
 
-.hero-shell {
+.hero-top {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
   gap: 2rem;
-  align-items: start;
+  align-items: center;
 }
 
-.hero-side {
-  display: grid;
-  gap: 1rem;
+.hero-copy {
+  padding-top: 0.15rem;
+  max-width: 33rem;
 }
 
 .eyebrow {
@@ -160,22 +161,24 @@ h2 {
 .lead {
   max-width: 36rem;
   margin-top: 1.35rem;
-  font-size: 1.22rem;
-  color: var(--muted);
+  font-size: 1.34rem;
+  color: rgba(19, 33, 27, 0.86);
+  font-weight: 600;
 }
 
 .supporting-copy {
   max-width: 42rem;
   margin-top: 1rem;
-  color: var(--muted);
-  font-size: 1rem;
+  color: rgba(19, 33, 27, 0.72);
+  font-size: 1.08rem;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem;
-  margin-top: 1.9rem;
+  justify-content: flex-start;
+  margin-top: 1.75rem;
 }
 
 .button {
@@ -193,30 +196,20 @@ h2 {
 
 .button-primary {
   color: #fff;
-  background: var(--accent);
-  box-shadow: 0 16px 36px rgba(23, 114, 87, 0.24);
+  background: var(--accent-gradient);
+  box-shadow: 0 18px 34px rgba(15, 91, 68, 0.22);
 }
 
 .button-primary:hover {
-  background: var(--accent-strong);
+  background: var(--accent-gradient);
   transform: translateY(-1px);
-}
-
-.button-secondary {
-  background: rgba(255, 255, 255, 0.72);
-  border-color: var(--line);
-}
-
-.button-secondary:hover {
-  background: #fff;
-  border-color: var(--line-strong);
 }
 
 .trust-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin: 2rem 0 0;
+  margin: 1.4rem 0 0;
   padding: 0;
   list-style: none;
 }
@@ -232,56 +225,19 @@ h2 {
 }
 
 .hero-art {
-  position: relative;
   margin: 0;
-  padding: 0.9rem;
-  border-radius: var(--radius-xl);
-  border: 1px solid rgba(255, 255, 255, 0.52);
-  background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 18rem),
-    linear-gradient(180deg, rgba(222, 233, 238, 0.92), rgba(245, 240, 229, 0.96));
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-
-.hero-art::after {
-  content: "";
-  position: absolute;
-  inset: auto 1.25rem 1rem 1.25rem;
-  height: 1px;
-  background: rgba(19, 33, 27, 0.08);
-}
-
-.hero-art-badge {
-  position: absolute;
-  top: 1.2rem;
-  left: 1.2rem;
-  z-index: 1;
-  padding: 0.4rem 0.7rem;
-  border-radius: 999px;
-  background: rgba(20, 34, 28, 0.74);
-  color: #f4efe2;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
 }
 
 .hero-art img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: calc(var(--radius-xl) - 8px);
-}
-
-.hero-art figcaption {
-  position: relative;
-  padding: 1rem 0 0.2rem;
-  color: var(--muted);
-  font-size: 0.95rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 42px rgba(19, 33, 27, 0.12);
 }
 
 .route-panel {
+  margin-top: 2rem;
   padding: 1.5rem;
   border-radius: var(--radius-xl);
   color: #fff;
@@ -291,22 +247,15 @@ h2 {
   box-shadow: var(--shadow);
 }
 
-.panel-kicker {
-  color: #9ccfbc;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
 .route-panel h2 {
-  margin-top: 0.45rem;
-  max-width: 9ch;
+  margin-top: 0;
+  max-width: none;
 }
 
 .route-grid {
   display: grid;
-  gap: 0.9rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
   margin-top: 1.4rem;
 }
 
@@ -327,19 +276,8 @@ h2 {
 }
 
 .route-card-featured {
-  background: linear-gradient(180deg, rgba(23, 114, 87, 0.95), rgba(15, 91, 68, 0.98));
+  background: var(--accent-gradient);
   border-color: rgba(191, 224, 211, 0.38);
-}
-
-.route-badge {
-  width: fit-content;
-  padding: 0.28rem 0.6rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.16);
-  font-size: 0.74rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .route-label,
@@ -432,7 +370,8 @@ footer {
 }
 
 @media (max-width: 980px) {
-  .hero-shell,
+  .hero-top,
+  .route-grid,
   .hub-shell {
     grid-template-columns: 1fr;
   }
@@ -469,6 +408,10 @@ footer {
 
   .nav {
     width: 100%;
+  }
+
+  .hero-copy {
+    max-width: none;
   }
 
   .hub-grid {
