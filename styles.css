@@ -134,6 +134,11 @@ p {
   align-items: start;
 }
 
+.hero-side {
+  display: grid;
+  gap: 1rem;
+}
+
 .eyebrow {
   margin-bottom: 1rem;
   color: var(--accent-strong);
@@ -224,6 +229,56 @@ h2 {
   color: var(--text);
   font-weight: 700;
   font-size: 0.92rem;
+}
+
+.hero-art {
+  position: relative;
+  margin: 0;
+  padding: 0.9rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 18rem),
+    linear-gradient(180deg, rgba(222, 233, 238, 0.92), rgba(245, 240, 229, 0.96));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.hero-art::after {
+  content: "";
+  position: absolute;
+  inset: auto 1.25rem 1rem 1.25rem;
+  height: 1px;
+  background: rgba(19, 33, 27, 0.08);
+}
+
+.hero-art-badge {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  z-index: 1;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(20, 34, 28, 0.74);
+  color: #f4efe2;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.hero-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius-xl) - 8px);
+}
+
+.hero-art figcaption {
+  position: relative;
+  padding: 1rem 0 0.2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .route-panel {
