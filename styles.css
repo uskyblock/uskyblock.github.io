@@ -14,6 +14,8 @@
   --accent-soft: #d8eee5;
   --accent-soft-strong: #bfe0d3;
   --max: 1160px;
+  --section-gap: 3rem;
+  --section-shell-padding: 1.9rem;
   --radius-xl: 28px;
   --radius-lg: 20px;
   --radius-md: 14px;
@@ -125,7 +127,7 @@ p {
 }
 
 .hero {
-  padding: 4.75rem 0 3.25rem;
+  padding: 4.75rem 0 var(--section-gap);
 }
 
 .hero-top {
@@ -218,8 +220,8 @@ h2 {
 }
 
 .route-panel {
-  margin-top: 2rem;
-  padding: 1.5rem;
+  margin-top: var(--section-gap);
+  padding: var(--section-shell-padding);
   border-radius: var(--radius-xl);
   color: #fff;
   background:
@@ -286,13 +288,13 @@ h2 {
 }
 
 .why {
-  padding: 0 0 3rem;
+  padding: 0 0 var(--section-gap);
 }
 
 .why-shell {
   display: grid;
   gap: 1.2rem;
-  padding: 1.9rem;
+  padding: var(--section-shell-padding);
   border-radius: var(--radius-xl);
   border: 1px solid rgba(23, 114, 87, 0.12);
   background:
@@ -343,13 +345,13 @@ h2 {
 }
 
 .hub {
-  padding: 1rem 0 4.25rem;
+  padding: 0 0 4.25rem;
 }
 
 .hub-shell {
   display: grid;
   gap: 1.1rem;
-  padding: 1.9rem;
+  padding: var(--section-shell-padding);
   border-radius: var(--radius-xl);
   background:
     radial-gradient(circle at top right, rgba(191, 224, 211, 0.14), transparent 20rem),
@@ -421,6 +423,11 @@ footer {
 }
 
 @media (max-width: 720px) {
+  :root {
+    --section-gap: 2.4rem;
+    --section-shell-padding: 1.35rem;
+  }
+
   .container {
     width: min(var(--max), calc(100% - 1.25rem));
   }
@@ -446,16 +453,11 @@ footer {
   }
 
   .hero {
-    padding: 2.2rem 0 2.4rem;
+    padding: 2.2rem 0 var(--section-gap);
   }
 
   .hero-copy {
     padding-top: 0;
-  }
-
-  .why-shell,
-  .hub-shell {
-    padding: 1.35rem;
   }
 
   .actions,
