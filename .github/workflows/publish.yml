@@ -60,7 +60,8 @@ jobs:
           sed -i 's|^site_url: .*|site_url: https://uskyblock.github.io/docs/|' docs-src/docs/mkdocs.yml
 
       - name: Build docs into /docs
-        run: mkdocs build --strict -f docs-src/docs/mkdocs.yml --site-dir dist/docs
+        run: |
+          mkdocs build --strict -f docs-src/docs/mkdocs.yml --site-dir "$GITHUB_WORKSPACE/dist/docs"
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v4
