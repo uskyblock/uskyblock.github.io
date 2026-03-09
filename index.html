@@ -6,46 +6,124 @@
   <title>uSkyBlock | Official Skyblock Plugin for Paper and Spigot</title>
   <meta
     name="description"
-    content="Official home of uSkyBlock, the open-source Skyblock plugin for Paper and Spigot. Start with install docs, player docs, developer docs, source code, and release listings."
+    content="Official home of uSkyBlock, the maintained open-source Skyblock plugin for Paper and Spigot. Download the latest release, read the docs, and find guides for players, server admins, and developers."
   />
   <link rel="canonical" href="https://uskyblock.github.io/" />
   <meta property="og:title" content="uSkyBlock | Official Skyblock Plugin for Paper and Spigot" />
   <meta
     property="og:description"
-    content="The canonical public home for modern uSkyBlock: installation, documentation, source code, and release listings for Paper and Spigot servers."
+    content="Official home of uSkyBlock, the maintained open-source Skyblock plugin for Paper and Spigot. Download the latest release, read the docs, and find guides for players, server admins, and developers."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://uskyblock.github.io/" />
   <meta property="og:site_name" content="uSkyBlock" />
   <meta property="og:image" content="https://uskyblock.github.io/assets/uskyblock-hero-720p.png" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="720" />
+  <meta property="og:image:alt" content="uSkyBlock Skyblock artwork showing two players on a floating starter island with a tree and chest" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="uSkyBlock | Official Skyblock Plugin for Paper and Spigot" />
   <meta
     name="twitter:description"
-    content="Official home of modern uSkyBlock for installation, docs, source code, and release links."
+    content="Official home of uSkyBlock, the maintained open-source Skyblock plugin for Paper and Spigot. Download the latest release and find the right docs fast."
   />
   <meta name="twitter:image" content="https://uskyblock.github.io/assets/uskyblock-hero-720p.png" />
+  <meta name="twitter:image:alt" content="uSkyBlock Skyblock artwork showing two players on a floating starter island with a tree and chest" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareSourceCode",
-      "name": "uSkyBlock",
-      "url": "https://uskyblock.github.io/",
-      "description": "Official home of modern uSkyBlock, the open-source Skyblock plugin for Paper and Spigot.",
-      "codeRepository": "https://github.com/uskyblock/uSkyBlock",
-      "programmingLanguage": "Java",
-      "runtimePlatform": "Paper, Spigot",
-      "keywords": [
-        "uSkyBlock",
-        "Skyblock plugin",
-        "Paper Skyblock plugin",
-        "Spigot Skyblock plugin"
-      ],
-      "softwareHelp": "https://uskyblock.github.io/uSkyBlock/",
-      "sameAs": [
-        "https://github.com/uskyblock/uSkyBlock",
-        "https://www.spigotmc.org/resources/uskyblock-revived.66795/",
-        "https://github.com/uskyblock/uSkyBlock/releases/latest"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://uskyblock.github.io/#organization",
+          "name": "uSkyBlock",
+          "alternateName": "uSkyBlock Revived",
+          "url": "https://uskyblock.github.io/",
+          "sameAs": [
+            "https://github.com/uskyblock/uSkyBlock",
+            "https://github.com/uskyblock/uSkyBlock/releases/latest",
+            "https://www.spigotmc.org/resources/uskyblock-revived.66795/",
+            "https://hangar.papermc.io/uSkyBlock/uSkyBlock",
+            "https://crowdin.com/project/uskyblock-revived"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://uskyblock.github.io/#website",
+          "url": "https://uskyblock.github.io/",
+          "name": "uSkyBlock",
+          "alternateName": "uSkyBlock Revived",
+          "description": "Official home of uSkyBlock, the maintained open-source Skyblock plugin for Paper and Spigot.",
+          "publisher": {
+            "@id": "https://uskyblock.github.io/#organization"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://uskyblock.github.io/#webpage",
+          "url": "https://uskyblock.github.io/",
+          "name": "uSkyBlock | Official Skyblock Plugin for Paper and Spigot",
+          "description": "Official home of uSkyBlock, the maintained open-source Skyblock plugin for Paper and Spigot. Download the latest release, read the docs, and find guides for players, server admins, and developers.",
+          "isPartOf": {
+            "@id": "https://uskyblock.github.io/#website"
+          },
+          "about": {
+            "@id": "https://uskyblock.github.io/#software"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://uskyblock.github.io/#primaryimage"
+          }
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://uskyblock.github.io/#primaryimage",
+          "url": "https://uskyblock.github.io/assets/uskyblock-hero-720p.png",
+          "width": 1280,
+          "height": 720,
+          "caption": "uSkyBlock Skyblock artwork showing two players on a floating starter island with a tree and chest"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://uskyblock.github.io/#software",
+          "name": "uSkyBlock",
+          "alternateName": "uSkyBlock Revived",
+          "description": "A maintained, open-source Skyblock plugin for Minecraft servers running Paper and Spigot.",
+          "applicationCategory": "GameApplication",
+          "operatingSystem": "Cross-platform",
+          "runtimePlatform": [
+            "Paper",
+            "Spigot"
+          ],
+          "softwareRequirements": "Minecraft server running Paper or Spigot",
+          "url": "https://uskyblock.github.io/",
+          "image": {
+            "@id": "https://uskyblock.github.io/#primaryimage"
+          },
+          "downloadUrl": "https://github.com/uskyblock/uSkyBlock/releases/latest",
+          "installUrl": "https://uskyblock.github.io/uSkyBlock/admin/setup/",
+          "softwareHelp": "https://uskyblock.github.io/uSkyBlock/",
+          "codeRepository": "https://github.com/uskyblock/uSkyBlock",
+          "publisher": {
+            "@id": "https://uskyblock.github.io/#organization"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "sameAs": [
+            "https://github.com/uskyblock/uSkyBlock",
+            "https://github.com/uskyblock/uSkyBlock/releases/latest",
+            "https://www.spigotmc.org/resources/uskyblock-revived.66795/",
+            "https://hangar.papermc.io/uSkyBlock/uSkyBlock"
+          ],
+          "keywords": [
+            "uSkyBlock",
+            "Skyblock plugin",
+            "Paper Skyblock plugin",
+            "Spigot Skyblock plugin"
+          ]
+        }
       ]
     }
   </script>
