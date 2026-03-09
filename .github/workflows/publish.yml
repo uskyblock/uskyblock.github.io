@@ -56,7 +56,8 @@ jobs:
           touch dist/.nojekyll
 
       - name: Patch docs site URL for canonical homepage
-        run: sed -i 's|^site_url: .*|site_url: https://uskyblock.github.io/docs/|' docs-src/docs/mkdocs.yml
+        run: |
+          sed -i 's|^site_url: .*|site_url: https://uskyblock.github.io/docs/|' docs-src/docs/mkdocs.yml
 
       - name: Build docs into /docs
         run: mkdocs build --strict -f docs-src/docs/mkdocs.yml --site-dir dist/docs
