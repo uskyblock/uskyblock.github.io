@@ -1,0 +1,79 @@
+name: Publish Site
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * *'
+  repository_dispatch:
+    types: [ docs-updated ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.repository_owner == 'uskyblock'
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout homepage repository
+        uses: actions/checkout@v6
+
+      - name: Checkout docs source repository
+        uses: actions/checkout@v6
+        with:
+          repository: uskyblock/uSkyBlock
+          ref: master
+          path: docs-src
+          persist-credentials: false
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: docs-src/docs/requirements-docs.txt
+
+      - name: Install docs dependencies
+        run: pip install -r docs-src/docs/requirements-docs.txt
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Assemble homepage
+        run: |
+          rm -rf dist
+          mkdir -p dist
+          cp index.html styles.css robots.txt sitemap.xml sitemap-home.xml dist/
+          cp -R assets dist/assets
+          touch dist/.nojekyll
+
+      - name: Patch docs site URL for canonical homepage
+        run: sed -i 's|^site_url: .*|site_url: https://uskyblock.github.io/docs/|' docs-src/docs/mkdocs.yml
+
+      - name: Build docs into /docs
+        run: mkdocs build --strict -f docs-src/docs/mkdocs.yml --site-dir dist/docs
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    if: github.repository_owner == 'uskyblock' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
