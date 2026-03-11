@@ -1,311 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>uSkyBlock | Official Skyblock Plugin for Paper and Spigot</title>
-  <meta
-    name="description"
-    content="Official home of uSkyBlock, the maintained open-source Skyblock plugin for Paper and Spigot. Download the latest release, read the docs, and find guides for players, server admins, and developers."
-  />
-  <meta name="google-site-verification" content="OoC4VFs1sRyGvIJEyDK_nDrEPJ26eRv2W_87U1qg7zE" />
-  <meta name="msvalidate.01" content="7F394C24B62FB4C8AEB8C543D05AD161" />
-  <link rel="canonical" href="https://uskyblock.github.io/" />
-  <link rel="icon" href="./assets/favicon/favicon.ico" sizes="any" />
-  <link rel="icon" href="./assets/favicon/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="./assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32" />
-  <link rel="icon" href="./assets/favicon/favicon-16x16.png" type="image/png" sizes="16x16" />
-  <link rel="apple-touch-icon" href="/assets/favicon/favicon-256x256.png" sizes="256x256" />
-  <meta property="og:title" content="uSkyBlock | Official Skyblock Plugin for Paper and Spigot" />
-  <meta
-    property="og:description"
-    content="Official home of uSkyBlock, the maintained open-source Skyblock plugin for Paper and Spigot. Download the latest release, read the docs, and find guides for players, server admins, and developers."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://uskyblock.github.io/" />
-  <meta property="og:site_name" content="uSkyBlock" />
-  <meta property="og:image" content="https://uskyblock.github.io/assets/uskyblock-hero-720p.png" />
-  <meta property="og:image:width" content="1280" />
-  <meta property="og:image:height" content="720" />
-  <meta property="og:image:alt" content="uSkyBlock Skyblock artwork showing two players on a floating starter island with a tree and chest" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="uSkyBlock | Official Skyblock Plugin for Paper and Spigot" />
-  <meta
-    name="twitter:description"
-    content="Official home of uSkyBlock, the maintained open-source Skyblock plugin for Paper and Spigot. Download the latest release and find the right docs fast."
-  />
-  <meta name="twitter:image" content="https://uskyblock.github.io/assets/uskyblock-hero-720p.png" />
-  <meta name="twitter:image:alt" content="uSkyBlock Skyblock artwork showing two players on a floating starter island with a tree and chest" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>uSkyBlock | Official Skyblock Plugin for Paper and Spigot</title>
+    <meta
+            name="description"
+            content="Official home of uSkyBlock, the maintained open-source Skyblock plugin for Paper and Spigot. Download the latest release, read the docs, and find guides for players, server admins, and developers."
+    />
+    <meta name="google-site-verification" content="OoC4VFs1sRyGvIJEyDK_nDrEPJ26eRv2W_87U1qg7zE"/>
+    <meta name="msvalidate.01" content="7F394C24B62FB4C8AEB8C543D05AD161"/>
+    <link rel="canonical" href="https://uskyblock.github.io/"/>
+    <link rel="icon" href="./assets/favicon/favicon.ico" sizes="any"/>
+    <link rel="icon" href="./assets/favicon/favicon.svg" type="image/svg+xml"/>
+    <link rel="icon" href="./assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32"/>
+    <link rel="icon" href="./assets/favicon/favicon-16x16.png" type="image/png" sizes="16x16"/>
+    <link rel="apple-touch-icon" href="/assets/favicon/favicon-256x256.png" sizes="256x256"/>
+    <meta property="og:title" content="uSkyBlock | Official Skyblock Plugin for Paper and Spigot"/>
+    <meta
+            property="og:description"
+            content="Official home of uSkyBlock, the maintained open-source Skyblock plugin for Paper and Spigot. Download the latest release, read the docs, and find guides for players, server admins, and developers."
+    />
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://uskyblock.github.io/"/>
+    <meta property="og:site_name" content="uSkyBlock"/>
+    <meta property="og:image" content="https://uskyblock.github.io/assets/uskyblock-hero-720p.png"/>
+    <meta property="og:image:width" content="1280"/>
+    <meta property="og:image:height" content="720"/>
+    <meta property="og:image:alt"
+          content="uSkyBlock Skyblock artwork showing two players on a floating starter island with a tree and chest"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="uSkyBlock | Official Skyblock Plugin for Paper and Spigot"/>
+    <meta
+            name="twitter:description"
+            content="Official home of uSkyBlock, the maintained open-source Skyblock plugin for Paper and Spigot. Download the latest release and find the right docs fast."
+    />
+    <meta name="twitter:image" content="https://uskyblock.github.io/assets/uskyblock-hero-720p.png"/>
+    <meta name="twitter:image:alt"
+          content="uSkyBlock Skyblock artwork showing two players on a floating starter island with a tree and chest"/>
+    <script type="application/ld+json">
         {
-          "@type": "Organization",
-          "@id": "https://uskyblock.github.io/#organization",
-          "name": "uSkyBlock",
-          "alternateName": "uSkyBlock Revived",
-          "url": "https://uskyblock.github.io/",
-          "sameAs": [
-            "https://github.com/uskyblock/uSkyBlock",
-            "https://github.com/uskyblock/uSkyBlock/releases/latest",
-            "https://www.spigotmc.org/resources/uskyblock-revived.66795/",
-            "https://hangar.papermc.io/uSkyBlock/uSkyBlock",
-            "https://crowdin.com/project/uskyblock-revived"
-          ]
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://uskyblock.github.io/#website",
-          "url": "https://uskyblock.github.io/",
-          "name": "uSkyBlock",
-          "alternateName": "uSkyBlock Revived",
-          "description": "Official home of uSkyBlock, the maintained open-source Skyblock plugin for Paper and Spigot.",
-          "publisher": {
-            "@id": "https://uskyblock.github.io/#organization"
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://uskyblock.github.io/#webpage",
-          "url": "https://uskyblock.github.io/",
-          "name": "uSkyBlock | Official Skyblock Plugin for Paper and Spigot",
-          "description": "Official home of uSkyBlock, the maintained open-source Skyblock plugin for Paper and Spigot. Download the latest release, read the docs, and find guides for players, server admins, and developers.",
-          "isPartOf": {
-            "@id": "https://uskyblock.github.io/#website"
-          },
-          "about": {
-            "@id": "https://uskyblock.github.io/#software"
-          },
-          "primaryImageOfPage": {
-            "@id": "https://uskyblock.github.io/#primaryimage"
-          }
-        },
-        {
-          "@type": "ImageObject",
-          "@id": "https://uskyblock.github.io/#primaryimage",
-          "url": "https://uskyblock.github.io/assets/uskyblock-hero-1280.webp",
-          "contentUrl": "https://uskyblock.github.io/assets/uskyblock-hero-1280.webp",
-          "width": 1280,
-          "height": 720,
-          "caption": "uSkyBlock Skyblock artwork showing two players on a floating starter island with a tree and chest"
-        },
-        {
-          "@type": "SoftwareApplication",
-          "@id": "https://uskyblock.github.io/#software",
-          "name": "uSkyBlock",
-          "alternateName": "uSkyBlock Revived",
-          "description": "A maintained, open-source Skyblock plugin for Minecraft servers running Paper and Spigot.",
-          "applicationCategory": "GameApplication",
-          "operatingSystem": "Cross-platform",
-          "runtimePlatform": [
-            "Paper",
-            "Spigot"
-          ],
-          "softwareRequirements": "Minecraft server running Paper or Spigot",
-          "url": "https://uskyblock.github.io/",
-          "image": {
-            "@id": "https://uskyblock.github.io/#primaryimage"
-          },
-          "downloadUrl": "https://github.com/uskyblock/uSkyBlock/releases/latest",
-          "installUrl": "https://uskyblock.github.io/docs/admin/setup/",
-          "softwareHelp": "https://uskyblock.github.io/docs/",
-          "codeRepository": "https://github.com/uskyblock/uSkyBlock",
-          "publisher": {
-            "@id": "https://uskyblock.github.io/#organization"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-          },
-          "sameAs": [
-            "https://github.com/uskyblock/uSkyBlock",
-            "https://github.com/uskyblock/uSkyBlock/releases/latest",
-            "https://www.spigotmc.org/resources/uskyblock-revived.66795/",
-            "https://hangar.papermc.io/uSkyBlock/uSkyBlock"
-          ],
-          "keywords": [
-            "uSkyBlock",
-            "Skyblock plugin",
-            "Paper Skyblock plugin",
-            "Spigot Skyblock plugin"
-          ]
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://uskyblock.github.io/#organization",
+                    "name": "uSkyBlock",
+                    "alternateName": "uSkyBlock Revived",
+                    "url": "https://uskyblock.github.io/",
+                    "sameAs": [
+                        "https://github.com/uskyblock/uSkyBlock",
+                        "https://github.com/uskyblock/uSkyBlock/releases/latest",
+                        "https://www.spigotmc.org/resources/uskyblock-revived.66795/",
+                        "https://hangar.papermc.io/uSkyBlock/uSkyBlock",
+                        "https://crowdin.com/project/uskyblock-revived"
+                    ]
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://uskyblock.github.io/#website",
+                    "url": "https://uskyblock.github.io/",
+                    "name": "uSkyBlock",
+                    "alternateName": "uSkyBlock Revived",
+                    "description": "Official home of uSkyBlock, the maintained open-source Skyblock plugin for Paper and Spigot.",
+                    "publisher": {
+                        "@id": "https://uskyblock.github.io/#organization"
+                    }
+                },
+                {
+                    "@type": "WebPage",
+                    "@id": "https://uskyblock.github.io/#webpage",
+                    "url": "https://uskyblock.github.io/",
+                    "name": "uSkyBlock | Official Skyblock Plugin for Paper and Spigot",
+                    "description": "Official home of uSkyBlock, the maintained open-source Skyblock plugin for Paper and Spigot. Download the latest release, read the docs, and find guides for players, server admins, and developers.",
+                    "isPartOf": {
+                        "@id": "https://uskyblock.github.io/#website"
+                    },
+                    "about": {
+                        "@id": "https://uskyblock.github.io/#software"
+                    },
+                    "primaryImageOfPage": {
+                        "@id": "https://uskyblock.github.io/#primaryimage"
+                    }
+                },
+                {
+                    "@type": "ImageObject",
+                    "@id": "https://uskyblock.github.io/#primaryimage",
+                    "url": "https://uskyblock.github.io/assets/uskyblock-hero-1280.webp",
+                    "contentUrl": "https://uskyblock.github.io/assets/uskyblock-hero-1280.webp",
+                    "width": 1280,
+                    "height": 720,
+                    "caption": "uSkyBlock Skyblock artwork showing two players on a floating starter island with a tree and chest"
+                },
+                {
+                    "@type": "SoftwareApplication",
+                    "@id": "https://uskyblock.github.io/#software",
+                    "name": "uSkyBlock",
+                    "alternateName": "uSkyBlock Revived",
+                    "description": "A maintained, open-source Skyblock plugin for Minecraft servers running Paper and Spigot.",
+                    "applicationCategory": "GameApplication",
+                    "operatingSystem": "Cross-platform",
+                    "runtimePlatform": [
+                        "Paper",
+                        "Spigot"
+                    ],
+                    "softwareRequirements": "Minecraft server running Paper or Spigot",
+                    "url": "https://uskyblock.github.io/",
+                    "image": {
+                        "@id": "https://uskyblock.github.io/#primaryimage"
+                    },
+                    "downloadUrl": "https://github.com/uskyblock/uSkyBlock/releases/latest",
+                    "installUrl": "https://uskyblock.github.io/docs/admin/setup/",
+                    "softwareHelp": "https://uskyblock.github.io/docs/",
+                    "codeRepository": "https://github.com/uskyblock/uSkyBlock",
+                    "publisher": {
+                        "@id": "https://uskyblock.github.io/#organization"
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "USD"
+                    },
+                    "sameAs": [
+                        "https://github.com/uskyblock/uSkyBlock",
+                        "https://github.com/uskyblock/uSkyBlock/releases/latest",
+                        "https://www.spigotmc.org/resources/uskyblock-revived.66795/",
+                        "https://hangar.papermc.io/uSkyBlock/uSkyBlock"
+                    ],
+                    "keywords": [
+                        "uSkyBlock",
+                        "Skyblock plugin",
+                        "Paper Skyblock plugin",
+                        "Spigot Skyblock plugin"
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  </script>
-  <link rel="stylesheet" href="./styles.css" />
+    </script>
+    <link rel="stylesheet" href="./styles.css"/>
 </head>
 <body>
-  <header class="site-header">
+<header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="/" aria-label="uSkyBlock home">
-        <span class="brand-name">uSkyBlock</span>
-        <span class="brand-note">Official home</span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="https://uskyblock.github.io/docs/">Docs</a>
-        <a href="https://github.com/uskyblock/uSkyBlock">GitHub</a>
-        <a href="https://github.com/uskyblock/uSkyBlock/releases/latest">Downloads</a>
-      </nav>
+        <a class="brand" href="/" aria-label="uSkyBlock home">
+            <span class="brand-name">uSkyBlock</span>
+            <span class="brand-note">Official home</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+            <a href="https://uskyblock.github.io/docs/">Docs</a>
+            <a href="https://github.com/uskyblock/uSkyBlock">GitHub</a>
+            <a href="https://github.com/uskyblock/uSkyBlock/releases/latest">Downloads</a>
+        </nav>
     </div>
-  </header>
+</header>
 
-  <main>
+<main>
     <section class="hero">
-      <div class="container">
-        <div class="hero-top">
-          <div class="hero-copy">
-            <h1>uSkyBlock</h1>
-            <p class="lead">
-              Skyblock for Spigot and Paper.
-            </p>
-            <p class="supporting-copy">
-              Start on a small floating island, build it into something thriving, complete
-              challenges, and team up with other players to push your island further.
-            </p>
-            <div class="actions">
-              <a class="button button-primary" href="https://github.com/uskyblock/uSkyBlock/releases/latest">
-                Download uSkyBlock
-              </a>
+        <div class="container">
+            <div class="hero-top">
+                <div class="hero-copy">
+                    <h1>uSkyBlock</h1>
+                    <p class="lead">
+                        Skyblock for Spigot and Paper.
+                    </p>
+                    <p class="supporting-copy">
+                        Start on a small floating island, build it into something thriving, complete
+                        challenges, and team up with other players to push your island further.
+                    </p>
+                    <div class="actions">
+                        <a class="button button-primary" href="https://github.com/uskyblock/uSkyBlock/releases/latest">
+                            Download uSkyBlock
+                        </a>
+                    </div>
+                </div>
+
+                <figure class="hero-art">
+                    <img
+                            src="./assets/uskyblock-hero-640.webp"
+                            srcset="./assets/uskyblock-hero-640.webp 1x, ./assets/uskyblock-hero-1280.webp 2x"
+                            alt="uSkyBlock Skyblock artwork showing two players on a floating starter island with a tree and chest"
+                            width="1280"
+                            height="720"
+                            fetchpriority="high"
+                            decoding="async"
+                    />
+                </figure>
             </div>
-          </div>
 
-          <figure class="hero-art">
-            <img
-              src="./assets/uskyblock-hero-640.webp"
-              srcset="./assets/uskyblock-hero-640.webp 1x, ./assets/uskyblock-hero-1280.webp 2x"
-              alt="uSkyBlock Skyblock artwork showing two players on a floating starter island with a tree and chest"
-              width="1280"
-              height="720"
-              fetchpriority="high"
-              decoding="async"
-            />
-          </figure>
+            <section class="route-panel" aria-labelledby="route-title">
+                <h2 id="route-title">Guides</h2>
+                <div class="route-grid">
+                    <a class="route-card" href="https://uskyblock.github.io/docs/players/">
+                        <h3 class="card-title">Players</h3>
+                        <p class="card-copy">
+                            Learn islands, challenges, parties, and the player command flow.
+                        </p>
+                        <span class="route-cta">Open player docs</span>
+                    </a>
+                    <a class="route-card route-card-featured" href="https://uskyblock.github.io/docs/admin/setup/">
+                        <h3 class="card-title">Server admins</h3>
+                        <p class="card-copy">
+                            Install uSkyBlock, verify startup, and configure gameplay for your server.
+                        </p>
+                        <span class="route-cta">Open setup guide</span>
+                    </a>
+                    <a class="route-card" href="https://uskyblock.github.io/docs/developers/">
+                        <h3 class="card-title">Developers</h3>
+                        <p class="card-copy">
+                            Build from source, inspect the architecture, and extend the plugin responsibly.
+                        </p>
+                        <span class="route-cta">Open developer docs</span>
+                    </a>
+                </div>
+            </section>
+
         </div>
-
-        <section class="route-panel" aria-labelledby="route-title">
-          <h2 id="route-title">Guides</h2>
-          <div class="route-grid">
-            <a class="route-card" href="https://uskyblock.github.io/docs/players/">
-              <h3 class="card-title">Players</h3>
-              <p class="card-copy">
-                Learn islands, challenges, parties, and the player command flow.
-              </p>
-              <span class="route-cta">Open player docs</span>
-            </a>
-            <a class="route-card route-card-featured" href="https://uskyblock.github.io/docs/admin/setup/">
-              <h3 class="card-title">Server admins</h3>
-              <p class="card-copy">
-                Install uSkyBlock, verify startup, and configure gameplay for your server.
-              </p>
-              <span class="route-cta">Open setup guide</span>
-            </a>
-            <a class="route-card" href="https://uskyblock.github.io/docs/developers/">
-              <h3 class="card-title">Developers</h3>
-              <p class="card-copy">
-                Build from source, inspect the architecture, and extend the plugin responsibly.
-              </p>
-              <span class="route-cta">Open developer docs</span>
-            </a>
-          </div>
-        </section>
-
-      </div>
     </section>
 
     <section class="why">
-      <div class="container why-shell">
-        <div class="why-intro">
-          <h2>Why server owners choose uSkyBlock</h2>
-          <p>
-            uSkyBlock gives you a complete Skyblock foundation with island progression, deep customization,
-            and a maintained open-source codebase you can build on long term.
-          </p>
-        </div>
-        <div class="why-grid">
-          <article class="why-card">
-            <h3 class="card-title">Complete Skyblock gameplay</h3>
-            <p class="card-copy">
-              Build your server around islands, progression, challenges, and party play.
-            </p>
-          </article>
-    
-          <article class="why-card">
-            <h3 class="card-title">Deep server customization</h3>
-            <p class="card-copy">
-              Shape the experience with gameplay-focused configuration, including challenge design,
-              biome options, custom island schematics, permissions, and more.
-            </p>
-          </article>
-    
-          <article class="why-card">
-            <h3 class="card-title">Integrates with your server</h3>
-            <p class="card-copy">
-              Extend uSkyBlock through its public API and placeholder support so it fits cleanly into
-              your existing server systems.
-            </p>
-          </article>
-      
-          <article class="why-card">
-            <h3 class="card-title">Open source with proven lineage</h3>
-            <p class="card-copy">
-              uSkyBlock is fully open source under GPLv3, free to run, and backed by more than a decade
-              of community project history.
-            </p>
-          </article>
-    
-          <article class="why-card">
-            <h3 class="card-title">Maintained for modern servers</h3>
-            <p class="card-copy">
-              Run a project that continues to evolve for current Paper and Spigot versions, with new features,
-              public docs, public issue tracking, and ongoing maintenance.
-            </p>
-          </article>
+        <div class="container why-shell">
+            <div class="why-intro">
+                <h2>Why server owners choose uSkyBlock</h2>
+                <p>
+                    uSkyBlock gives you a complete Skyblock foundation with island progression, deep customization,
+                    and a maintained open-source codebase you can build on long term.
+                </p>
+            </div>
+            <div class="why-grid">
+                <article class="why-card">
+                    <div class="why-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-layers-icon lucide-layers">
+                            <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/>
+                            <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/>
+                            <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Complete Skyblock gameplay</h3>
+                    <p class="card-copy">
+                        Build your server around islands, progression, challenges, and party play.
+                    </p>
+                </article>
 
-          <article class="why-card">
-            <h3 class="card-title">International by default</h3>
-            <p class="card-copy">
-              Support a global player base with 53 bundled languages and active translation contribution opportunities.
-            </p>
-          </article>
+                <article class="why-card">
+                    <div class="why-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-sliders-horizontal-icon lucide-sliders-horizontal">
+                            <path d="M10 5H3"/>
+                            <path d="M12 19H3"/>
+                            <path d="M14 3v4"/>
+                            <path d="M16 17v4"/>
+                            <path d="M21 12h-9"/>
+                            <path d="M21 19h-5"/>
+                            <path d="M21 5h-7"/>
+                            <path d="M8 10v4"/>
+                            <path d="M8 12H3"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Deep server customization</h3>
+                    <p class="card-copy">
+                        Shape the experience with gameplay-focused configuration including challenge design,
+                        biome options, custom island schematics, permissions, and more.
+                    </p>
+                </article>
+
+                <article class="why-card">
+                    <div class="why-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-puzzle-icon lucide-puzzle">
+                            <path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Integrates with your server</h3>
+                    <p class="card-copy">
+                        Extend uSkyBlock through its public API and placeholder support so it fits cleanly into
+                        your existing server systems.
+                    </p>
+                </article>
+
+                <article class="why-card">
+                    <div class="why-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-git-branch-icon lucide-git-branch">
+                            <path d="M15 6a9 9 0 0 0-9 9V3"/>
+                            <circle cx="18" cy="6" r="3"/>
+                            <circle cx="6" cy="18" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Open source with proven lineage</h3>
+                    <p class="card-copy">
+                        uSkyBlock is fully open source under GPLv3, free to run, and backed by more than a decade
+                        of community project history.
+                    </p>
+                </article>
+
+                <article class="why-card">
+                    <div class="why-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-wrench-icon lucide-wrench">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Maintained for modern servers</h3>
+                    <p class="card-copy">
+                        Run a project that continues to evolve for current Paper and Spigot versions, with new features,
+                        public docs, public issue tracking, and ongoing maintenance.
+                    </p>
+                </article>
+
+                <article class="why-card">
+                    <div class="why-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-globe-icon lucide-globe">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">International by default</h3>
+                    <p class="card-copy">
+                        Support a global player base with 53 bundled languages and active translation contribution
+                        opportunities.
+                    </p>
+                </article>
+            </div>
         </div>
-      </div>
     </section>
 
     <section class="hub">
-      <div class="container hub-shell">
-        <h2>Project hub</h2>
-        <div class="hub-grid">
-          <a class="hub-card" href="https://uskyblock.github.io/docs/">
-            <h3 class="card-title">Documentation</h3>
-            <p class="card-copy">Canonical docs for players, admins, and developers.</p>
-          </a>
-          <a class="hub-card" href="https://github.com/uskyblock/uSkyBlock">
-            <h3 class="card-title">GitHub</h3>
-            <p class="card-copy">Source code, releases, history, and active development.</p>
-          </a>
-          <a class="hub-card" href="https://github.com/uskyblock/uSkyBlock/issues">
-            <h3 class="card-title">Issues</h3>
-            <p class="card-copy">Bug reports, regressions, and feature requests.</p>
-          </a>
-          <a class="hub-card" href="https://crowdin.com/project/uskyblock-revived">
-            <h3 class="card-title">Crowdin</h3>
-            <p class="card-copy">Help translate uSkyBlock and improve localization.</p>
-          </a>
-          <a class="hub-card" href="https://www.spigotmc.org/resources/uskyblock-revived.66795/">
-            <h3 class="card-title">Spigot</h3>
-            <p class="card-copy">Plugin listing for the Spigot ecosystem.</p>
-          </a>
-          <a class="hub-card" href="https://hangar.papermc.io/uSkyBlock/uSkyBlock">
-            <h3 class="card-title">Hangar</h3>
-            <p class="card-copy">Paper-friendly release listing and discovery.</p>
-          </a>
+        <div class="container hub-shell">
+            <h2>Project hub</h2>
+            <div class="hub-grid">
+                <a class="hub-card" href="https://uskyblock.github.io/docs/">
+                    <h3 class="card-title">Documentation</h3>
+                    <p class="card-copy">Canonical docs for players, admins, and developers.</p>
+                </a>
+                <a class="hub-card" href="https://github.com/uskyblock/uSkyBlock">
+                    <h3 class="card-title">GitHub</h3>
+                    <p class="card-copy">Source code, releases, history, and active development.</p>
+                </a>
+                <a class="hub-card" href="https://github.com/uskyblock/uSkyBlock/issues">
+                    <h3 class="card-title">Issues</h3>
+                    <p class="card-copy">Bug reports, regressions, and feature requests.</p>
+                </a>
+                <a class="hub-card" href="https://crowdin.com/project/uskyblock-revived">
+                    <h3 class="card-title">Crowdin</h3>
+                    <p class="card-copy">Help translate uSkyBlock and improve localization.</p>
+                </a>
+                <a class="hub-card" href="https://www.spigotmc.org/resources/uskyblock-revived.66795/">
+                    <h3 class="card-title">Spigot</h3>
+                    <p class="card-copy">Plugin listing for the Spigot ecosystem.</p>
+                </a>
+                <a class="hub-card" href="https://hangar.papermc.io/uSkyBlock/uSkyBlock">
+                    <h3 class="card-title">Hangar</h3>
+                    <p class="card-copy">Paper-friendly release listing and discovery.</p>
+                </a>
+            </div>
         </div>
-      </div>
     </section>
-  </main>
+</main>
 
 </body>
 </html>
