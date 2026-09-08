@@ -22,10 +22,10 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout homepage repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Checkout docs source repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: uskyblock/uSkyBlock
           ref: master
@@ -33,7 +33,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           cache: 'pip'
@@ -43,7 +43,7 @@ jobs:
         run: pip install -r docs-src/docs/requirements-docs.txt
 
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Assemble homepage
         run: |
@@ -62,7 +62,7 @@ jobs:
           mkdocs build --strict -f docs-src/docs/mkdocs.yml --site-dir "$GITHUB_WORKSPACE/dist/docs"
 
       - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
@@ -76,4 +76,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
