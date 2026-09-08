@@ -1,0 +1,21 @@
+# Dependabot keeps the GitHub Actions used in our publish workflow up to date.
+# The docs toolchain (mkdocs, mkdocs-material) is pinned in
+# uskyblock/uSkyBlock at docs/requirements-docs.txt and is tracked by that
+# repository's Dependabot config, so there is no pip entry here.
+# https://docs.github.com/code-security/dependabot
+version: 2
+updates:
+  # ---- GitHub Actions referenced in .github/workflows ----
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    labels:
+      - "dependencies"
+    commit-message:
+      prefix: "ci"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
