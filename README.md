@@ -33,15 +33,17 @@ Then open `http://localhost:8000`.
 
 ## Deployment
 
-This repository is published via GitHub Pages at:
+This repository is published via GitHub Pages at the custom domain:
 
-`https://uskyblock.github.io/`
+`https://uskyblock.org/`
+
+`https://uskyblock.github.io/` redirects there.
 
 Changes to `main` are intended to update the live site.
 
 The GitHub Pages workflow in this repo also builds the MkDocs documentation from the main `uSkyBlock` repository and publishes it under:
 
-`https://uskyblock.github.io/docs/`
+`https://uskyblock.org/docs/`
 
 ## Notes
 
