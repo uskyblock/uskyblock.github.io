@@ -35,7 +35,7 @@ Then open `http://localhost:8000`.
 
 This repository is published via GitHub Pages at the custom domain:
 
-`https://uskyblock.org/`
+`https://uskyblock.org`
 
 `https://uskyblock.github.io/` redirects there.
 
