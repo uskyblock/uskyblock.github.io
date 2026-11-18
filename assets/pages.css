@@ -125,8 +125,9 @@
   font-size: 0.95rem;
 }
 
-/* The icon sits on a tinted tile of the artwork's shape, so the row lines up. */
-.icon-tile {
+/* The icon sits centred on a tinted tile of the artwork's shape, so the row lines up. Two classes, so it outranks the
+   block display of the grid's other image links. */
+.media-grid .icon-tile {
   display: grid;
   place-items: center;
   aspect-ratio: 16 / 9;
