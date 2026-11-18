@@ -1,0 +1,184 @@
+/* The inner pages (/about/, /press/): a page head, running text, a facts table and image grids, on the homepage's
+   tokens from styles.css. */
+
+.page {
+  padding: 3.5rem 0 1rem;
+}
+
+.page-head h1 {
+  max-width: none;
+  font-size: clamp(2.6rem, 6vw, 4rem);
+}
+
+.page-head .lead {
+  max-width: 44rem;
+}
+
+.prose {
+  max-width: 46rem;
+  margin-top: 1rem;
+}
+
+.prose h2 {
+  margin: 2.8rem 0 0.9rem;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.prose h3 {
+  margin: 1.6rem 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.prose p,
+.prose ul {
+  margin: 0 0 1rem;
+}
+
+.prose ul {
+  padding-left: 1.2rem;
+}
+
+.prose li + li {
+  margin-top: 0.35rem;
+}
+
+.prose a,
+.media-grid figcaption a {
+  color: var(--accent-strong);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.quote {
+  margin: 0 0 1rem;
+  padding: 0.95rem 1.15rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: rgba(216, 238, 229, 0.62);
+}
+
+.quote p:last-child {
+  margin-bottom: 0;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  margin: 0 0 1rem;
+}
+
+.facts {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.97rem;
+}
+
+.facts th,
+.facts td {
+  padding: 0.6rem 0.75rem 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.facts th {
+  width: 11rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  max-width: 60rem;
+  margin: 0.4rem 0 1rem;
+}
+
+.media-grid.cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.media-grid figure {
+  margin: 0;
+}
+
+.media-grid figure > a {
+  display: block;
+}
+
+.media-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+.media-grid figcaption {
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* The icon sits on a tinted tile of the artwork's shape, so the row lines up. */
+.icon-tile {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  max-width: 100%;
+  border-radius: var(--radius-md);
+  background: var(--accent-soft);
+}
+
+.media-grid .icon-tile img {
+  width: 28%;
+  border-radius: 0;
+}
+
+.maintainers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.8rem;
+  margin: 1.8rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.maintainers li {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+.maintainers img {
+  width: 64px;
+  height: 128px;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.25));
+}
+
+.maintainers span {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding-top: 2.5rem;
+  }
+
+  .media-grid,
+  .media-grid.cols-3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .facts th {
+    width: 8.5rem;
+  }
+}

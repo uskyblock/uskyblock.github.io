@@ -13,7 +13,9 @@ This repository contains the canonical landing page for:
 
 - `index.html` - homepage markup and metadata
 - `styles.css` - site styles and responsive layout
-- `assets/` - homepage image assets
+- `assets/` - image assets, and `pages.css` for the pages under `pages/`
+- `pages/` - the other pages, at their published paths: `/about/` (history and maintainers) and `/press/` (the press
+  kit, whose facts are the current release's and need updating with each release)
 - `redirects/` - pages of the old ultimateskyblock.net wiki (that domain forwards with the path), each sending readers
   to the docs page that covers it now, and addresses of the coming 4.0 site that other sites already link to
 - `robots.txt` - crawler directives

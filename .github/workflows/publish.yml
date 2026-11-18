@@ -52,6 +52,7 @@ jobs:
           cp index.html styles.css robots.txt sitemap.xml sitemap-home.xml dist/
           cp -R assets dist/assets
           cp -R redirects/. dist/
+          cp -R pages/. dist/
           touch dist/.nojekyll
 
       - name: Patch docs site URL for canonical homepage
